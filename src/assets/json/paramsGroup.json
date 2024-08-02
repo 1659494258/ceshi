@@ -1,0 +1,364 @@
+{
+  "a1b1": {
+    "_label": "授信对象",
+    "_type": "collapse",
+    "_right": {
+      "_editable": "0",
+      "_disable": "0"
+    },
+    "_extends": [],
+    "_data": {
+      "a1b1c1": {
+        "_label": "客户类型",
+        "_type": "2",
+        "_right": {
+          "_editable": "0",
+          "_disable": "0"
+        },
+        "_control": {
+          "_available": {
+            "_value": [
+              "1",
+              "2",
+              "3"
+            ],
+            "_right": "1"
+          },
+          "_unavailable": {
+            "_value": [
+              "4",
+              "5",
+              "6"
+            ],
+            "_right": "0"
+          },
+          "_default": {
+            "_value": "3",
+            "_right": "1"
+          }
+        }
+      },
+      "a1b1c2": {
+        "_label": "客户年龄",
+        "_type": "2",
+        "_right": {
+          "_editable": "0",
+          "_disable": "0"
+        },
+        "_control": {
+          "_max": {
+            "_value": "80",
+            "_right": "2"
+          },
+          "_min": {
+            "_value": "18",
+            "_right": "2"
+          },
+          "_default": {
+            "_value": "3",
+            "_right": "1"
+          }
+        }
+      },
+      "a1b1c3": {
+        "_label": "贷款期限",
+        "_type": "2",
+        "_right": {
+          "_editable": "0",
+          "_disable": "0"
+        },
+        "_option": {
+          "_option_method": "",
+          "_option_params": ""
+        },
+        "_control": {
+          "_available": {
+            "_value": [
+              "1",
+              "2",
+              "3"
+            ],
+            "_right": "1"
+          },
+          "_unavailable": {
+            "_value": [
+              "4",
+              "5",
+              "6"
+            ],
+            "_right": "0"
+          },
+          "_max": {
+            "_value": "360",
+            "_right": "2"
+          },
+          "_min": {
+            "_value": "120",
+            "_right": "2"
+          },
+          "_default": {
+            "_value": "36",
+            "_right": "1"
+          }
+        }
+      },
+      "a1b1c4": {
+        "_label": "xx条款模板",
+        "_type": "2",
+        "_right": {
+          "_editable": "0",
+          "_disable": "0"
+        },
+        "_control": {
+          "_default": {
+            "_value": "二、双方的权利与义务2.1 甲方权利与义务：（1）甲方有权获得乙方提供的[具体服务或产品]；（2）甲方应按时支付乙方[服务费用或产品费用]；（3）甲方应遵守本条款规定的其他义务。",
+            "_type": "textarea",
+            "_right": "1"
+          }
+        }
+      }
+    }
+  },
+  "a1b2": {
+    "_label": "定价方案",
+    "_type": "3",
+    "_right": {
+      "_editable": "0",
+      "_disable": "0"
+    },
+    "_extends": [],
+    "_data": {
+      "_params": {
+        "a1b2c1": {
+          "_label": "贷款期限"
+        },
+        "a1b2c2": {
+          "_label": "还款方式"
+        },
+        "a1b2c3": {
+          "_label": "利率浮动方式"
+        },
+        "a1b2c4": {
+          "_label": "利率浮动幅度"
+        },
+        "a1b2c5": {
+          "_label": "执行利率"
+        }
+      },
+      "_rule": {
+        "_if": {
+          "_op": "or",
+          "_od": [
+            {
+              "_op": "lt",
+              "_od": [
+                {
+                  "_op": "parameter",
+                  "_od": [
+                    "a1b2c1"
+                  ]
+                },
+                {
+                  "_op": "constantValue",
+                  "_od": [
+                    "360"
+                  ]
+                }
+              ]
+            },
+            {
+              "_op": "and",
+              "_od": [
+                {
+                  "_op": "gt",
+                  "_od": [
+                    {
+                      "_op": "parameter",
+                      "_od": [
+                        "a1b2c1"
+                      ]
+                    },
+                    {
+                      "_op": "constantValue",
+                      "_od": [
+                        "360"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "_op": "eq",
+                  "_od": [
+                    {
+                      "_op": "parameter",
+                      "_od": [
+                        "a1b2c2"
+                      ]
+                    },
+                    {
+                      "_op": "constantValue",
+                      "_od": [
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "_then": {
+          "_op": "gt",
+          "_od": [
+            {
+              "_op": "parameter",
+              "_od": [
+                "a1b2c5"
+              ]
+            },
+            {
+              "_op": "constantValue",
+              "_od": [
+                "8"
+              ]
+            }
+          ]
+        },
+        "_else": {
+          "_op": "gt",
+          "_od": [
+            {
+              "_op": "parameter",
+              "_od": [
+                "a1b2c5"
+              ]
+            },
+            {
+              "_op": "constantValue",
+              "_od": [
+                "6"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "a1b3": {
+    "_label": "用信方案",
+    "_type": "collapse",
+    "_right": {
+      "_editable": "0",
+      "_disable": "0"
+    },
+    "_extends": [],
+    "_data": {
+      "a1b3c1": {
+        "_label": "还款方案",
+        "_type": "3",
+        "_right": {
+          "_editable": "0",
+          "_disable": "0"
+        },
+        "_extends": [],
+        "_data": {
+          "_params": {
+            "a1b3c1d1": {
+              "_label": "贷款期限"
+            },
+            "a1b3c1d2": {
+              "_label": "还款方式"
+            }
+          },
+          "_rule": {
+            "_if": {
+              "_op": "gt",
+              "_od": [
+                {
+                  "_op": "parameter",
+                  "_od": [
+                    "a1b3c1d1"
+                  ]
+                },
+                {
+                  "_op": "constantValue",
+                  "_od": [
+                    "12"
+                  ]
+                }
+              ]
+            },
+            "_then": {
+              "_op": "in",
+              "_od": [
+                {
+                  "_op": "parameter",
+                  "_od": [
+                    "a1b3c1d2"
+                  ]
+                },
+                {
+                  "_op": "component",
+                  "_od": [
+                    {
+                      "_id": "a1b3c1d1e1",
+                      "_label": "一次性还本付息",
+                      "_right": {
+                        "_editable": "0",
+                        "_disable": "0"
+                      },
+                      "_extends": []
+                    },
+                    {
+                      "_id": "a1b3c1d1e2",
+                      "_label": "按月付息到期还本",
+                      "_right": {
+                        "_editable": "0",
+                        "_disable": "0"
+                      },
+                      "_extends": []
+                    }
+                  ]
+                }
+              ]
+            },
+            "_else": {
+              "_op": "in",
+              "_od": [
+                {
+                  "_op": "parameter",
+                  "_od": [
+                    "a1b3c1d2"
+                  ]
+                },
+                {
+                  "_op": "component",
+                  "_od": [
+                    {
+                      "_id": "a1b3c1d1e3",
+                      "_label": "等额本金",
+                      "_right": {
+                        "_editable": "0",
+                        "_disable": "0"
+                      },
+                      "_extends": []
+                    },
+                    {
+                      "_id": "a1b3c1d1e4",
+                      "_label": "等额本息",
+                      "_right": {
+                        "_editable": "0",
+                        "_disable": "0"
+                      },
+                      "_extends": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

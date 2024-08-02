@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1-1",
+    "title": "组件定义",
+    "icon": "Folder",
+    "path": "/policyCenter/componentDefinition",
+    "prentID": "1",
+    "children": [
+      {
+        "id": "1-1-1",
+        "title": "产品组件",
+        "icon": "DocumentRemove",
+        "path": "/policyCenter/componentDefinition/product",
+        "prentID": "1-1"
+      },
+      {
+        "id": "1-1-2",
+        "title": "贷后组件",
+        "icon": "DocumentRemove",
+        "path": "/policyCenter/componentDefinition/afterLoaning",
+        "prentID": "1-1"
+      },
+      {
+        "id": "1-1-3",
+        "title": "授权组件",
+        "icon": "DocumentRemove",
+        "path": "/policyCenter/componentDefinition/authorization",
+        "prentID": "1-1"
+      }
+    ]
+  },
+  {
+    "id": "1-2",
+    "title": "产品定义",
+    "icon": "Folder",
+    "path": "/policyCenter/productDefinition/productDefinition",
+    "prentID": "1"
+  },
+  {
+    "id": "1-4",
+    "title": "产品政策维护",
+    "icon": "Folder",
+    "path": "/policyCenter/productPolicyMaintain/productPolicyMaintain",
+    "prentID": "1"
+  },
+  {
+    "id": "1-3",
+    "title": "过程管理",
+    "icon": "Folder",
+    "path": "/policyCenter/processManage",
+    "prentID": "1",
+    "children": [
+      {
+        "id": "1-3-1",
+        "title": "产品岗",
+        "icon": "DocumentRemove",
+        "path": "/policyCenter/processManage/productPost",
+        "prentID": "1-3"
+      },
+      {
+        "id": "1-3-2",
+        "title": "风险岗",
+        "icon": "DocumentRemove",
+        "path": "/policyCenter/processManage/riskPost",
+        "prentID": "1-3"
+      },
+      {
+        "id": "1-3-3",
+        "title": "运营岗",
+        "icon": "DocumentRemove",
+        "path": "/policyCenter/processManage/operationPost",
+        "prentID": "1-3"
+      },
+      {
+        "id": "1-3-4",
+        "title": "财务岗",
+        "icon": "DocumentRemove",
+        "path": "/policyCenter/processManage/financialPost",
+        "prentID": "1-3"
+      },
+      {
+        "id": "1-3-5",
+        "title": "系统岗",
+        "icon": "DocumentRemove",
+        "path": "/policyCenter/processManage/systemPost",
+        "prentID": "1-3"
+      }
+    ]
+  }
+]

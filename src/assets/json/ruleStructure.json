@@ -1,0 +1,222 @@
+{
+  "id": "0002",
+  "name": "授信对象",
+  "tag": "授信对象",
+  "group": "1",
+  "type": "3",
+  "effective_date": "",
+  "expire_date": "",
+  "data": {
+    "_extends": [""],
+    "_data": {
+      "p1": {
+        "_label": "还款方案",
+        "_right": {
+          "_editable": "0",
+          "_disable": "0"
+        },
+        "_extends": [],
+        "_data": {
+          "_params": {
+            "a1b3c1d1": {
+              "_label": "贷款期限"
+            },
+            "a1b3c1d2": {
+              "_label": "还款方式"
+            }
+          },
+          "_rule": {
+            "_if": {
+              "_op": "gt",
+              "_od": [
+                {
+                  "_op": "parameter",
+                  "_od": ["a1b3c1d1"]
+                },
+                {
+                  "_op": "constantValue",
+                  "_od": ["12"]
+                }
+              ]
+            },
+            "_then": {
+              "_op": "in",
+              "_od": [
+                {
+                  "_op": "parameter",
+                  "_od": ["a1b3c1d2"]
+                },
+                {
+                  "_op": "component",
+                  "_od": [
+                    {
+                      "_id": "a1b3c1d1e1",
+                      "_label": "一次性还本付息",
+                      "_right": {
+                        "_editable": "0",
+                        "_disable": "0"
+                      },
+                      "_extends": []
+                    },
+                    {
+                      "_id": "a1b3c1d1e2",
+                      "_label": "按月付息到期还本",
+                      "_right": {
+                        "_editable": "0",
+                        "_disable": "0"
+                      },
+                      "_extends": []
+                    }
+                  ]
+                }
+              ]
+            },
+            "_else": {
+              "_op": "in",
+              "_od": [
+                {
+                  "_op": "parameter",
+                  "_od": ["a1b3c1d2"]
+                },
+                {
+                  "_op": "component",
+                  "_od": [
+                    {
+                      "_id": "a1b3c1d1e3",
+                      "_label": "等额本金",
+                      "_right": {
+                        "_editable": "0",
+                        "_disable": "0"
+                      },
+                      "_extends": []
+                    },
+                    {
+                      "_id": "a1b3c1d1e4",
+                      "_label": "等额本息",
+                      "_right": {
+                        "_editable": "0",
+                        "_disable": "0"
+                      },
+                      "_extends": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "p2": {
+        "_label": "定价方案",
+        "_right": {
+          "_editable": "0",
+          "_disable": "0"
+        },
+        "_extends": [],
+        "_data": {
+          "_params": {
+            "a1b2c1": {
+              "_label": "贷款期限"
+            },
+            "a1b2c2": {
+              "_label": "还款方式"
+            },
+            "a1b2c3": {
+              "_label": "利率浮动方式"
+            },
+            "a1b2c4": {
+              "_label": "利率浮动幅度"
+            },
+            "a1b2c5": {
+              "_label": "执行利率"
+            }
+          },
+          "_rule": {
+            "_if": {
+              "_op": "or",
+              "_od": [
+                {
+                  "_op": "lt",
+                  "_od": [
+                    {
+                      "_op": "parameter",
+                      "_od": ["a1b2c1"]
+                    },
+                    {
+                      "_op": "constantValue",
+                      "_od": ["360"]
+                    }
+                  ]
+                },
+                {
+                  "_op": "and",
+                  "_od": [
+                    {
+                      "_op": "gt",
+                      "_od": [
+                        {
+                          "_op": "parameter",
+                          "_od": ["a1b2c1"]
+                        },
+                        {
+                          "_op": "constantValue",
+                          "_od": ["360"]
+                        }
+                      ]
+                    },
+                    {
+                      "_op": "eq",
+                      "_od": [
+                        {
+                          "_op": "parameter",
+                          "_od": ["a1b2c2"]
+                        },
+                        {
+                          "_op": "constantValue",
+                          "_od": ["1"]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "_then": {
+              "_op": "gt",
+              "_od": [
+                {
+                  "_op": "parameter",
+                  "_od": ["a1b2c5"]
+                },
+                {
+                  "_op": "constantValue",
+                  "_od": ["8"]
+                }
+              ]
+            },
+            "_else": {
+              "_op": "gt",
+              "_od": [
+                {
+                  "_op": "parameter",
+                  "_od": ["a1b2c5"]
+                },
+                {
+                  "_op": "constantValue",
+                  "_od": ["6"]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "status": "",
+  "create_time": "",
+  "create_userid": "",
+  "create_orgid": "",
+  "update_time": "",
+  "update_userid": "",
+  "update_orgid": ""
+}

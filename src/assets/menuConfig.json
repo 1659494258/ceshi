@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "title": "首页",
+    "_key": "http://192.168.13.173:8083/cfs/Redirector?ComponentURL=/AppMain/Welcome/Welcome.jsp",
+    "prentID": "0"
+  },
+  {
+    "id": "2",
+    "title": "业务配置",
+    "_key": "/financial",
+    "prentID": "0",
+    "children": [
+      {
+        "id": "2-1",
+        "title": "基础参数配置",
+        "_key": "https://nodejs.org/zh-cn/download/releases/",
+        "prentID": "2"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "系统设置",
+    "_key": "/system",
+    "icon": "el-icon-setting",
+    "prentID": "0",
+    "children": [
+      {
+        "id": "3-1",
+        "title": "渠道管理",
+        "_key": "http://192.168.10.127:8301/cfs/ao?aoID=C2022092014365084822607095103431",
+        "prentID": "3"
+      }
+    ]
+  }
+]

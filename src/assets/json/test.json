@@ -1,0 +1,25 @@
+{
+  "id": "0001",
+  "name": "客户类型",
+  "tag": "客户类型",
+  "group": "1",
+  "type": "1",
+  "effective_date": "",
+  "expire_date": "",
+  "data": {
+    "_extends": [""],
+    "_data": {
+      "_type": "1",
+      "_precision": "",
+      "_option_method": "",
+      "_option_params": ""
+    }
+  },
+  "status": "",
+  "create_time": "",
+  "create_userid": "",
+  "create_orgid": "",
+  "update_time": "",
+  "update_userid": "",
+  "update_orgid": ""
+}

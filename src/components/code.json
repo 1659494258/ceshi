@@ -1,0 +1,71 @@
+{
+  "desc": "code",
+  "code": {
+    "andOr": [
+      {
+        "label": "and",
+        "value": "and"
+      },
+      {
+        "label": "or",
+        "value": "or"
+      }
+    ],
+    "firstOption": [
+      {
+        "label": "年龄",
+        "value": "年龄",
+        "mark": "age"
+      },
+      {
+        "label": "国籍",
+        "value": "国籍",
+        "mark": "nation"
+      }
+    ],
+    "operate": {
+      "age": [
+        {
+          "label": "<",
+          "value": "<"
+        },
+        {
+          "label": "=",
+          "value": "="
+        },
+        {
+          "label": ">",
+          "value": ">"
+        }
+      ],
+      "nation": [
+        {
+          "label": "=",
+          "value": "="
+        }
+      ]
+    },
+    "secondOption": {
+      "age": [
+        {
+          "label": "10",
+          "value": "10"
+        },
+        {
+          "label": "11",
+          "value": "11"
+        },
+        {
+          "label": "12",
+          "value": "12"
+        }
+      ],
+      "nation": [
+        {
+          "label": "中国",
+          "value": "中国"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,737 @@
+{
+  "_extends": [],
+  "_data": {
+    "a1": {
+      "_label": "业务要素",
+      "_type": "1",
+      "_right": {
+        "_editable": "0",
+        "_disable": "0"
+      },
+      "_extends": [],
+      "_data": {
+        "a1b1": {
+          "_label": "授信对象",
+          "_type": "collapse",
+          "_right": {
+            "_editable": "0",
+            "_disable": "0"
+          },
+          "_extends": [],
+          "_data": {
+            "a1b1c1": {
+              "_label": "客户类型",
+              "_type": "2",
+              "_right": {
+                "_editable": "0",
+                "_controlItems": [
+                  "_available",
+                  "_unavailable"
+                ],
+                "_disable": "0"
+              },
+              "_control": {
+                "_available": {
+                  "_value": [
+                    "1",
+                    "2",
+                    "3"
+                  ],
+                  "_right": "1"
+                },
+                "_unavailable": {
+                  "_value": [
+                    "4",
+                    "5",
+                    "6"
+                  ],
+                  "_right": "0"
+                },
+                "_default": {
+                  "_value": "3",
+                  "_right": "1"
+                }
+              }
+            },
+            "a1b1c2": {
+              "_label": "客户年龄",
+              "_type": "2",
+              "_right": {
+                "_editable": "0",
+                "_disable": "0"
+              },
+              "_control": {
+                "_max": {
+                  "_value": "80",
+                  "_right": "2"
+                },
+                "_min": {
+                  "_value": "18",
+                  "_right": "2"
+                },
+                "_default": {
+                  "_value": "3",
+                  "_right": "1"
+                }
+              }
+            },
+            "a1b1c3": {
+              "_label": "贷款期限",
+              "_type": "2",
+              "_right": {
+                "_editable": "0",
+                "_disable": "0"
+              },
+              "_option": {
+                "_option_method": "",
+                "_option_params": ""
+              },
+              "_control": {
+                "_available": {
+                  "_value": [
+                    "1",
+                    "2",
+                    "3"
+                  ],
+                  "_right": "1"
+                },
+                "_unavailable": {
+                  "_value": [
+                    "4",
+                    "5",
+                    "6"
+                  ],
+                  "_right": "0"
+                },
+                "_max": {
+                  "_value": "360",
+                  "_right": "2"
+                },
+                "_min": {
+                  "_value": "120",
+                  "_right": "2"
+                },
+                "_default": {
+                  "_value": "36",
+                  "_right": "1"
+                }
+              }
+            },
+            "a1b1c4": {
+              "_label": "xx条款模板",
+              "_type": "2",
+              "_right": {
+                "_editable": "0",
+                "_disable": "0"
+              },
+              "_control": {
+                "_default": {
+                  "_value": "二、双方的权利与义务2.1 甲方权利与义务：（1）甲方有权获得乙方提供的[具体服务或产品]；（2）甲方应按时支付乙方[服务费用或产品费用]；（3）甲方应遵守本条款规定的其他义务。",
+                  "_type": "textarea",
+                  "_right": "1"
+                }
+              }
+            }
+          }
+        },
+        "a1b2": {
+          "_label": "定价方案",
+          "_type": "3",
+          "_right": {
+            "_editable": "0",
+            "_disable": "0"
+          },
+          "_extends": [],
+          "_data": {
+            "_params": {
+              "a1b2c1": {
+                "_label": "贷款期限"
+              },
+              "a1b2c2": {
+                "_label": "还款方式"
+              },
+              "a1b2c3": {
+                "_label": "利率浮动方式"
+              },
+              "a1b2c4": {
+                "_label": "利率浮动幅度"
+              },
+              "a1b2c5": {
+                "_label": "执行利率"
+              }
+            },
+            "_rule": {
+              "_if": {
+                "_op": "or",
+                "_od": [
+                  {
+                    "_op": "lt",
+                    "_od": [
+                      {
+                        "_op": "parameter",
+                        "_od": [
+                          "a1b2c1"
+                        ]
+                      },
+                      {
+                        "_op": "constantValue",
+                        "_od": [
+                          "360"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "_op": "and",
+                    "_od": [
+                      {
+                        "_op": "gt",
+                        "_od": [
+                          {
+                            "_op": "parameter",
+                            "_od": [
+                              "a1b2c1"
+                            ]
+                          },
+                          {
+                            "_op": "constantValue",
+                            "_od": [
+                              "360"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "_op": "eq",
+                        "_od": [
+                          {
+                            "_op": "parameter",
+                            "_od": [
+                              "a1b2c2"
+                            ]
+                          },
+                          {
+                            "_op": "constantValue",
+                            "_od": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "_then": {
+                "_op": "gt",
+                "_od": [
+                  {
+                    "_op": "parameter",
+                    "_od": [
+                      "a1b2c5"
+                    ]
+                  },
+                  {
+                    "_op": "constantValue",
+                    "_od": [
+                      "8"
+                    ]
+                  }
+                ]
+              },
+              "_else": {
+                "_op": "gt",
+                "_od": [
+                  {
+                    "_op": "parameter",
+                    "_od": [
+                      "a1b2c5"
+                    ]
+                  },
+                  {
+                    "_op": "constantValue",
+                    "_od": [
+                      "6"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "a1b3": {
+          "_label": "用信方案",
+          "_type": "collapse",
+          "_right": {
+            "_editable": "0",
+            "_disable": "0"
+          },
+          "_extends": [],
+          "_data": {
+            "a1b3c1": {
+              "_label": "还款方案",
+              "_type": "3",
+              "_right": {
+                "_editable": "0",
+                "_disable": "0"
+              },
+              "_extends": [],
+              "_data": {
+                "_params": {
+                  "a1b3c1d1": {
+                    "_label": "贷款期限"
+                  },
+                  "a1b3c1d2": {
+                    "_label": "还款方式"
+                  }
+                },
+                "_rule": {
+                  "_if": {
+                    "_op": "gt",
+                    "_od": [
+                      {
+                        "_op": "parameter",
+                        "_od": [
+                          "a1b3c1d1"
+                        ]
+                      },
+                      {
+                        "_op": "constantValue",
+                        "_od": [
+                          "12"
+                        ]
+                      }
+                    ]
+                  },
+                  "_then": {
+                    "_op": "in",
+                    "_od": [
+                      {
+                        "_op": "parameter",
+                        "_od": [
+                          "a1b3c1d2"
+                        ]
+                      },
+                      {
+                        "_op": "component",
+                        "_od": [
+                          {
+                            "_id": "a1b3c1d1e1",
+                            "_label": "一次性还本付息",
+                            "_right": {
+                              "_editable": "0",
+                              "_disable": "0"
+                            },
+                            "_extends": []
+                          },
+                          {
+                            "_id": "a1b3c1d1e2",
+                            "_label": "按月付息到期还本",
+                            "_right": {
+                              "_editable": "0",
+                              "_disable": "0"
+                            },
+                            "_extends": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "_else": {
+                    "_op": "in",
+                    "_od": [
+                      {
+                        "_op": "parameter",
+                        "_od": [
+                          "a1b3c1d2"
+                        ]
+                      },
+                      {
+                        "_op": "component",
+                        "_od": [
+                          {
+                            "_id": "a1b3c1d1e3",
+                            "_label": "等额本金",
+                            "_right": {
+                              "_editable": "0",
+                              "_disable": "0"
+                            },
+                            "_extends": []
+                          },
+                          {
+                            "_id": "a1b3c1d1e4",
+                            "_label": "等额本息",
+                            "_right": {
+                              "_editable": "0",
+                              "_disable": "0"
+                            },
+                            "_extends": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "a2": {
+      "_label": "业务活动",
+      "_right": {
+        "_editable": "0",
+        "_disable": "0"
+      },
+      "_extends": [],
+      "_type": "1",
+      "_data": {
+        "a2b1": {
+          "_label": "受理流程政策",
+          "_type": "collapse",
+          "_right": {
+            "_editable": "0",
+            "_disable": "0"
+          },
+          "_extends": [],
+          "_data": {
+            "a2b1c1": {
+              "_label": "业务资料",
+              "_type": "4",
+              "_right": {
+                "_editable": "0",
+                "_disable": "0"
+              },
+              "_extends": [],
+              "_data": {
+                "_params": {
+                  "a2b1c1d1": {
+                    "_label": "资料编号",
+                    "_right": {
+                      "_editable": "0",
+                      "_disable": "0"
+                    }
+                  },
+                  "a2b1c1d2": {
+                    "_label": "资料名称",
+                    "_right": {
+                      "_editable": "0",
+                      "_disable": "0"
+                    }
+                  },
+                  "a2b1c1d3": {
+                    "_label": "资料份数",
+                    "_right": {
+                      "_editable": "0",
+                      "_disable": "0"
+                    }
+                  },
+                  "a2b1c1d4": {
+                    "_label": "资料格式",
+                    "_right": {
+                      "_editable": "0",
+                      "_disable": "0"
+                    }
+                  },
+                  "a2b1c1d5": {
+                    "_label": "是否必须",
+                    "_right": {
+                      "_editable": "0",
+                      "_disable": "0"
+                    }
+                  }
+                },
+                "_values": [
+                  {
+                    "_right": {
+                      "_delete": "0",
+                      "_writable": "0"
+                    },
+                    "_data": {
+                      "a2b1c1d1": "12345678",
+                      "a2b1c1d2": "xxx文件",
+                      "a2b1c1d3": "1",
+                      "a2b1c1d4": "1",
+                      "a2b1c1d5": "0"
+                    }
+                  },
+                  {
+                    "_right": {
+                      "_delete": "0",
+                      "_writable": "0"
+                    },
+                    "_data": {
+                      "a2b1c1d1": "12345679",
+                      "a2b1c1d2": "yyy文件",
+                      "a2b1c1d3": "1",
+                      "a2b1c1d4": "1",
+                      "a2b1c1d5": "0"
+                    }
+                  }
+                ]
+              }
+            },
+            "a2b1c2": {
+              "_label": "受理流程",
+              "_type": "3",
+              "_right": {
+                "_editable": "0",
+                "_disable": "0"
+              },
+              "_extends": [],
+              "_data": {
+                "_params": {
+                  "a2b1c2d1": {
+                    "_label": "受理渠道"
+                  },
+                  "a2b1c2d2": {
+                    "_label": "受理流程"
+                  }
+                },
+                "_rule": {
+                  "_if": {
+                    "_op": "in",
+                    "_od": [
+                      {
+                        "_op": "parameter",
+                        "_od": [
+                          "a2b1c2d1"
+                        ]
+                      },
+                      {
+                        "_op": "arrayValue",
+                        "_od": [
+                          "mobile",
+                          "weixin"
+                        ]
+                      }
+                    ]
+                  },
+                  "_then": {
+                    "_op": "eq",
+                    "_od": [
+                      {
+                        "_op": "parameter",
+                        "_od": [
+                          "a2b1c2d2"
+                        ]
+                      },
+                      {
+                        "_op": "component",
+                        "_od": [
+                          {
+                            "_id": "a2b1c2e1",
+                            "_label": "线上受理流程",
+                            "type": "5",
+                            "_right": {
+                              "_editable": "0",
+                              "_disable": "0"
+                            },
+                            "_extends": [],
+                            "_data": {
+                              "_serviceId": "business-server",
+                              "_external": "OnlineApplyFlow",
+                              "_nodes": {
+                                "n1": {
+                                  "_label": "进件申请",
+                                  "type": "6",
+                                  "_nodeType": "人工",
+                                  "_status": "启用",
+                                  "_operator": "客户经理",
+                                  "_right": {
+                                    "_editable": "0",
+                                    "_disable": "0"
+                                  },
+                                  "_extends": [],
+                                  "_data": {
+                                    "_processor": {
+                                      "p1": {
+                                        "_label": "客户信息录入",
+                                        "_status": "启用",
+                                        "type": "7",
+                                        "_right": {
+                                          "_editable": "0",
+                                          "_disable": "0"
+                                        },
+                                        "_extends": [],
+                                        "_data": {
+                                          "_component": "xxxStepView",
+                                          "_params": {
+                                            "objectNo": "12345678"
+                                          },
+                                          "_handler": {
+                                            "_items": {
+                                              "s1": {
+                                                "_label": "客户信息录入",
+                                                "_status": "启用",
+                                                "_right": {
+                                                  "_editable": "0",
+                                                  "_disable": "0"
+                                                },
+                                                "_extends": [],
+                                                "_data": {
+                                                  "_component": "xxxFormView",
+                                                  "_params": {
+                                                    "objectNo": "12345678"
+                                                  },
+                                                  "_handler": {
+                                                    "_form": {
+                                                      "_layout": {
+                                                        "_groups": {
+                                                          "g1": {
+                                                            "_label": "基本信息"
+                                                          },
+                                                          "g2": {
+                                                            "_label": "授信信息"
+                                                          }
+                                                        }
+                                                      },
+                                                      "_service": {
+                                                        "_query": {
+                                                          "_api": "/xxquery",
+                                                          "_params": {}
+                                                        },
+                                                        "_submit": {
+                                                          "_api": "/xxupdate",
+                                                          "_params": {}
+                                                        }
+                                                      },
+                                                      "_columns": {
+                                                        "customerId": {
+                                                          "_label": "客户编号",
+                                                          "_visiable": "1",
+                                                          "_editable": "0",
+                                                          "_tips": "客户编号",
+                                                          "_group": "0",
+                                                          "_unit": "",
+                                                          "_options": {},
+                                                          "_required": "",
+                                                          "_lenght": ""
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "s2": {
+                                                "_label": "担保信息录入",
+                                                "_status": "启用",
+                                                "_right": {
+                                                  "_editable": "0",
+                                                  "_disable": "0"
+                                                },
+                                                "_extends": []
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "_retry": {},
+                                    "_repeat": {},
+                                    "_router": {
+                                      "n2": {
+                                        "_condition": {}
+                                      },
+                                      "n3": {
+                                        "_condition": {}
+                                      },
+                                      "n4": {
+                                        "_condition": {}
+                                      }
+                                    }
+                                  }
+                                },
+                                "n2": {
+                                  "_label": "自动审批",
+                                  "type": "6",
+                                  "_nodeType": "自动",
+                                  "_status": "启用",
+                                  "_operator": "客户经理",
+                                  "_right": {
+                                    "_editable": "0",
+                                    "_disable": "0"
+                                  },
+                                  "_extends": [],
+                                  "_data": {
+                                    "_processor": {
+                                      "p2": {
+                                        "_label": "流程提交",
+                                        "_status": "启用",
+                                        "_right": {
+                                          "_editable": "0",
+                                          "_disable": "0"
+                                        },
+                                        "_extends": [],
+                                        "_data": {
+                                          "_component": "后端处理类",
+                                          "_params": {},
+                                          "_handler": {}
+                                        }
+                                      }
+                                    },
+                                    "_retry": {},
+                                    "_repeat": {},
+                                    "_router": {
+                                      "n3": {
+                                        "_condition": {}
+                                      },
+                                      "n4": {
+                                        "_condition": {}
+                                      }
+                                    }
+                                  }
+                                },
+                                "n3": {
+                                  "_label": "审批通过",
+                                  "type": "6",
+                                  "_nodeType": "人工",
+                                  "_status": "启用",
+                                  "_operator": "客户经理",
+                                  "_right": {
+                                    "_editable": "0",
+                                    "_disable": "0"
+                                  },
+                                  "_extends": [],
+                                  "_data": {
+                                    "_processor": {},
+                                    "_retry": {},
+                                    "_repeat": {},
+                                    "_router": {}
+                                  }
+                                },
+                                "n4": {
+                                  "_label": "审批否决",
+                                  "type": "6",
+                                  "_nodeType": "人工",
+                                  "_status": "启用",
+                                  "_operator": "客户经理",
+                                  "_right": {
+                                    "_editable": "0",
+                                    "_disable": "0"
+                                  },
+                                  "_extends": [],
+                                  "_data": {
+                                    "_processor": {},
+                                    "_retry": {},
+                                    "_repeat": {},
+                                    "_router": {}
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

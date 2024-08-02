@@ -1,0 +1,96 @@
+{
+  "id": "SN0001",
+  "name": "授信对象",
+  "tag": "授信对象",
+  "group": "1",
+  "type": "3",
+  "effective_date": "",
+  "expire_date": "",
+  "data": {
+    "_extends": [""],
+    "_data": {
+      "a2b1c1": {
+        "_label": "业务资料",
+        "_right": {
+          "_editable": "0",
+          "_disable": "0"
+        },
+        "_extends": [],
+        "_data": {
+          "_params": {
+            "a2b1c1d1": {
+              "_label": "资料编号",
+              "_right": {
+                "_editable": "0",
+                "_disable": "0"
+              }
+            },
+            "a2b1c1d2": {
+              "_label": "资料名称",
+              "_right": {
+                "_editable": "0",
+                "_disable": "0"
+              }
+            },
+            "a2b1c1d3": {
+              "_label": "资料份数",
+              "_right": {
+                "_editable": "0",
+                "_disable": "0"
+              }
+            },
+            "a2b1c1d4": {
+              "_label": "资料格式",
+              "_right": {
+                "_editable": "0",
+                "_disable": "0"
+              }
+            },
+            "a2b1c1d5": {
+              "_label": "是否必须",
+              "_right": {
+                "_editable": "0",
+                "_disable": "0"
+              }
+            }
+          },
+          "_values": [
+            {
+              "_right": {
+                "_delete": "0",
+                "_writable": "0"
+              },
+              "_data": {
+                "a2b1c1d1": "12345678",
+                "a2b1c1d2": "xxx文件",
+                "a2b1c1d3": "1",
+                "a2b1c1d4": "1",
+                "a2b1c1d5": "0"
+              }
+            },
+            {
+              "_right": {
+                "_delete": "0",
+                "_writable": "0"
+              },
+              "_data": {
+                "a2b1c1d1": "12345679",
+                "a2b1c1d2": "yyy文件",
+                "a2b1c1d3": "1",
+                "a2b1c1d4": "1",
+                "a2b1c1d5": "0"
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "status": "",
+  "create_time": "",
+  "create_userid": "",
+  "create_orgid": "",
+  "update_time": "",
+  "update_userid": "",
+  "update_orgid": ""
+}

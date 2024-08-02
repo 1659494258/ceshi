@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "title": "配置中心",
+    "path": "/policyCenter",
+    "icon": "FolderOpened",
+    "prentID": "0"
+  },
+  {
+    "id": "2",
+    "title": "流程中心",
+    "path": "/policyCenter",
+    "icon": "FolderOpened",
+    "prentID": "1"
+  },
+  {
+    "id": "3",
+    "title": "合作中心",
+    "path": "/policyCenter",
+    "icon": "FolderOpened",
+    "prentID": "2"
+  }
+]

@@ -1,0 +1,261 @@
+// {
+//   "id": "0003",
+//   "name": "授信对象",
+//   "tag": "授信对象",
+//   "group": "1",
+//   "type": "2",
+//   "effective_date": "",
+//   "expire_date": "",
+//   "data": {
+//     "_extends": [
+//       ""
+//     ],
+//     "_data": {
+//       "p1": {
+//         "_label": "客户类型",
+//         "_right": {
+//           "_editable": "0",
+//           "_disable": "0"
+//         },
+//         "_option": {
+//           "_option_method": "",
+//           "_option_params": ""
+//         },
+//         "_control": {
+//           "_available": {
+//             "_value": [
+//               "1",
+//               "2",
+//               "3"
+//             ],
+//             "_right": "1"
+//           },
+//           "_unavailable": {
+//             "_value": [
+//               "4",
+//               "5",
+//               "6"
+//             ],
+//             "_right": "0"
+//           },
+//           "_max": {
+//             "_value": "80",
+//             "_right": "2"
+//           },
+//           "_min": {
+//             "_value": "18",
+//             "_right": "2"
+//           },
+//           "_default": {
+//             "_value": "20",
+//             "_right": "1"
+//           }
+//         }
+//       },
+//       "p2": {
+//         "_label": "客户年龄",
+//         "_right": {
+//           "_editable": "0",
+//           "_disable": "0"
+//         },
+//         "_control": {
+//           "_max": {
+//             "_value": "80",
+//             "_right": "2"
+//           },
+//           "_min": {
+//             "_value": "18",
+//             "_right": "2"
+//           },
+//           "_default": {
+//             "_value": "3",
+//             "_right": "1"
+//           }
+//         }
+//       },
+//       "a1b1c3": {
+//         "_label": "xx条款模板",
+//         "_right": {
+//           "_editable": "0",
+//           "_disable": "0"
+//         },
+//         "_control": {
+//           "_default": {
+//             "_value": "3",
+//             "_right": "1"
+//           }
+//         }
+//       },
+//       "a1b1c4": {
+//         "_label": "贷款期限",
+//         "_right": {
+//           "_editable": "0",
+//           "_disable": "0"
+//         },
+//         "_option": {
+//           "_option_method": "",
+//           "_option_params": ""
+//         },
+//         "_control": {
+//           "_available": {
+//             "_value": [
+//               "1",
+//               "2",
+//               "3"
+//             ],
+//             "_right": "1"
+//           },
+//           "_unavailable": {
+//             "_value": [
+//               "4",
+//               "5",
+//               "6"
+//             ],
+//             "_right": "0"
+//           },
+//           "_max": {
+//             "_value": "360",
+//             "_right": "2"
+//           },
+//           "_min": {
+//             "_value": "120",
+//             "_right": "2"
+//           },
+//           "_default": {
+//             "_value": "3240",
+//             "_right": "1"
+//           }
+//         }
+//       }
+//     }
+//   },
+//   "status": "",
+//   "create_time": "",
+//   "create_userid": "",
+//   "create_orgid": "",
+//   "update_time": "",
+//   "update_userid": "",
+//   "update_orgid": ""
+// }
+{
+  "a1b1": {
+    "_label": "授信对象",
+    "_type": "collapse",
+    "_right": {
+      "_editable": "0",
+      "_disable": "0"
+    },
+    "_extends": [],
+    "_data": {
+      "a1b1c1": {
+        "_label": "客户类型",
+        "_type": "2",
+        "_right": {
+          "_editable": "0",
+          "_disable": "0"
+        },
+        "_control": {
+          "_available": {
+            "_value": [
+              "1",
+              "2",
+              "3"
+            ],
+            "_right": "1"
+          },
+          "_unavailable": {
+            "_value": [
+              "4",
+              "5",
+              "6"
+            ],
+            "_right": "0"
+          },
+          "_default": {
+            "_value": "3",
+            "_right": "1"
+          }
+        }
+      },
+      "a1b1c2": {
+        "_label": "客户年龄",
+        "_type": "2",
+        "_right": {
+          "_editable": "0",
+          "_disable": "0"
+        },
+        "_control": {
+          "_max": {
+            "_value": "80",
+            "_right": "2"
+          },
+          "_min": {
+            "_value": "18",
+            "_right": "2"
+          },
+          "_default": {
+            "_value": "3",
+            "_right": "1"
+          }
+        }
+      },
+      "a1b1c3": {
+        "_label": "贷款期限",
+        "_type": "2",
+        "_right": {
+          "_editable": "0",
+          "_disable": "0"
+        },
+        "_option": {
+          "_option_method": "",
+          "_option_params": ""
+        },
+        "_control": {
+          "_available": {
+            "_value": [
+              "1",
+              "2",
+              "3"
+            ],
+            "_right": "1"
+          },
+          "_unavailable": {
+            "_value": [
+              "4",
+              "5",
+              "6"
+            ],
+            "_right": "0"
+          },
+          "_max": {
+            "_value": "360",
+            "_right": "2"
+          },
+          "_min": {
+            "_value": "120",
+            "_right": "2"
+          },
+          "_default": {
+            "_value": "36",
+            "_right": "1"
+          }
+        }
+      },
+      "a1b1c4": {
+        "_label": "xx条款模板",
+        "_type": "2",
+        "_right": {
+          "_editable": "0",
+          "_disable": "0"
+        },
+        "_control": {
+          "_default": {
+            "_value": "二、双方的权利与义务2.1 甲方权利与义务：（1）甲方有权获得乙方提供的[具体服务或产品]；（2）甲方应按时支付乙方[服务费用或产品费用]；（3）甲方应遵守本条款规定的其他义务。",
+            "_type": "textarea",
+            "_right": "1"
+          }
+        }
+      }
+    }
+  }
+}
