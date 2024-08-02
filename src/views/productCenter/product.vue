@@ -10,8 +10,21 @@
       />
     </div>
     <!--  -->
-    <div style="flex: 1; height: 100%; overflow-y: scroll; padding-top: 10px; box-sizing: border-box">
-      <div class="product" v-for="(item, key, index) in policy._data" :key="index" :id="key">
+    <div
+      style="
+        flex: 1;
+        height: 100%;
+        overflow-y: scroll;
+        padding-top: 10px;
+        box-sizing: border-box;
+      "
+    >
+      <div
+        class="product"
+        v-for="(item, key, index) in policy._data"
+        :key="index"
+        :id="key"
+      >
         <div class="productTitle">
           <!-- 左侧标题和图标 -->
           <div class="productTitle_left">
@@ -26,15 +39,39 @@
                 width: 100px;
               "
             />
-            <el-icon :size="16" hover="color:bule" @click="changeUnfoldStatus(index)" v-if="!unfoldStatus">
+            <el-icon
+              :size="16"
+              hover="color:bule"
+              @click="changeUnfoldStatus(index)"
+              v-if="!unfoldStatus"
+            >
               <ArrowRightBold />
             </el-icon>
-            <el-icon :size="16" hover="color:bule" @click="changeUnfoldStatus(index)" v-if="unfoldStatus">
+            <el-icon
+              :size="16"
+              hover="color:bule"
+              @click="changeUnfoldStatus(index)"
+              v-if="unfoldStatus"
+            >
               <ArrowLeftBold />
             </el-icon>
           </div>
-          <div style="display: flex; justify-content: space-between; align-items: center; width: 90%">
-            <div style="display: flex; align-items: center; width: 95%; justify-content: end">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 90%;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                width: 95%;
+                justify-content: end;
+              "
+            >
               <div class="rightItem">
                 <!-- primary -->
                 <el-button
@@ -83,21 +120,36 @@
               </el-popover>
 
               <!-- 标题相关的权限 -->
-              <div class="productTitle_right" v-if="productTitleIndex === index && unfoldStatus">
+              <div
+                class="productTitle_right"
+                v-if="productTitleIndex === index && unfoldStatus"
+              >
                 <!-- <div class="rightItem">
                   <span style="margin-right: 10px">名称：</span>
                   <el-input v-model="item._label" style="width: 100px" />
                 </div> -->
                 <div class="rightItem">
-                  <span style="margin-right: 10px">被继承后是否允许被修改：</span>
-                  <el-select v-model="item._right._editable" placeholder=" " style="width: 60px">
+                  <span style="margin-right: 10px"
+                    >被继承后是否允许被修改：</span
+                  >
+                  <el-select
+                    v-model="item._right._editable"
+                    placeholder=" "
+                    style="width: 60px"
+                  >
                     <el-option label="否" value="0" />
                     <el-option label="是" value="1" />
                   </el-select>
                 </div>
                 <div class="rightItem">
-                  <span style="margin-right: 10px">被继承后是否允许被修改：</span>
-                  <el-select v-model="item._right._disable" placeholder=" " style="width: 60px">
+                  <span style="margin-right: 10px"
+                    >被继承后是否允许被修改：</span
+                  >
+                  <el-select
+                    v-model="item._right._disable"
+                    placeholder=" "
+                    style="width: 60px"
+                  >
                     <el-option label="否" value="0" />
                     <el-option label="是" value="1" />
                   </el-select>
@@ -117,16 +169,36 @@
             </el-icon>
           </div>
         </div>
-        <component :is="currentComponent(item._type)" :dataDefault="item._data"></component>
+        <component
+          :is="currentComponent(item._type)"
+          :dataDefault="item._data"
+        ></component>
       </div>
     </div>
     <!-- dialog弹出框 -->
-    <el-dialog v-model="centerDialogVisible" title="业务要素" width="80%" align-center center>
+    <el-dialog
+      v-model="centerDialogVisible"
+      title="业务要素"
+      width="80%"
+      align-center
+      center
+    >
       <ParameterGroup :dataDefault="paramsGroup"></ParameterGroup>
     </el-dialog>
     <!--最外层+号的 dialog弹出框 -->
-    <el-dialog v-model="addDialogVisible" title="" width="60%" align-center center>
-      <el-table :data="gridData" highlight-current-row @selection-change="handleSelectionChange" ref="multipleTableRef">
+    <el-dialog
+      v-model="addDialogVisible"
+      title=""
+      width="60%"
+      align-center
+      center
+    >
+      <el-table
+        :data="gridData"
+        highlight-current-row
+        @selection-change="handleSelectionChange"
+        ref="multipleTableRef"
+      >
         <el-table-column type="selection" width="55" />
         <el-table-column property="id" label="编号" />
         <el-table-column property="name" label="名称" />
@@ -135,7 +207,9 @@
       <template #footer>
         <div class="dialog-footer">
           <el-button @click="addDialogVisible = false">取消</el-button>
-          <el-button type="primary" @click="addDialogVisible = false">确定</el-button>
+          <el-button type="primary" @click="addDialogVisible = false"
+            >确定</el-button
+          >
         </div>
       </template>
     </el-dialog>
@@ -246,7 +320,6 @@ onMounted(() => {
         id: key,
         children: [],
       })
-      // console.log(policy._data[key]._label,treeData.value.length);
       if (Object.keys(policy._data[key]._data).length) {
         for (const key1 in policy._data[key]._data) {
           treeData.value[treeData.value.length - 1].children.push({
@@ -254,12 +327,10 @@ onMounted(() => {
             id: key1,
             children: [],
           })
-          // console.log(policy._data[key]._data[key1], treeData.value)
         }
       }
     }
   }
-  // console.log(treeData.value)
 })
 
 const currentComponent = (type: any) => {
