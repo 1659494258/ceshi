@@ -33,7 +33,7 @@ export default defineConfig({
     proxy: {
       '/config': {
         // target: 'http://10.2.65.205:9202/',
-        target: 'http://192.168.66.16:9200/',
+        target: 'http://192.168.66.16:9200/12312',
         // target: 'http://192.168.66.122:9202/',
         changeOrigin: true,
         secure: false, // 请求是否为https
