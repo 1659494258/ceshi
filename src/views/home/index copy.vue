@@ -138,20 +138,6 @@ let tableData = [
     product: "信用付",
     account: "175",
   },
-  {
-    date: "2016-05-04",
-    customerNumber: "123445",
-    name: "Tom",
-    product: "信用付",
-    account: "165",
-  },
-  {
-    date: "2016-05-01",
-    customerNumber: "123442",
-    name: "Tom",
-    product: "信用付",
-    account: "180",
-  },
 ];
 
 let toDetail = () => {
